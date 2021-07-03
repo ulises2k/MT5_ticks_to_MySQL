@@ -1,28 +1,28 @@
 # MT5_ticks_to_MySQL
-Сбор тиков из MetaTrader 5 в MySQL напрямую в базу через libmysql в реалтайме
+Recopilación de ticks de MetaTrader 5 a MySQL directamente en la base de datos a través de libmysql en tiempo real 3
+
 #MQL5 #MT5 #MySQL
 
-<h4>Установка:</h4>
-<p> - копируем содержимое в папку MQL терминала</p> 
-<p> - разрешаем dll в настройках терминала </p>
-<p> - устанавливаем, настраиваем MySQL и создаем базу под тики </p>
+<h4>Instalación:</h4>
+<p> - copiar el contenido a la carpeta del terminal MQL</p> 
+<p> - habilitar dll en la configuración del terminal</p>
+<p> - instalar, configurar MySQL y crear una base de datos para ticks</p>
 
-<h4>Настройки:</h4>
-Из фитчей: 
-если поле Список инструментов оставить пустым, то будут собираться тики со всех инструментов из Обзора Рынка
+<h4>Ajustes:</h4>
+De las caracteristicas:
+Si el campo Lista de instrumentos se deja en blanco, se recopilarán los ticks de todos los instrumentos de Market Watch.
 <p align="center">
   <img src="https://github.com/Lxbinary/MT5_ticks_to_MySQL/raw/master/image/setup.png" width="400"/>
 </p>
 
-<h4>Print лога работы:</h4>
+<h4>Imprimir registro de trabajo:</h4>
 <p align="center">
   <img src="https://github.com/Lxbinary/MT5_ticks_to_MySQL/raw/master/image/mt_log.png" width="600"/>
 </p>
 
-в ms указано потраченое время на запись в базу
+el tiempo dedicado a escribir en la base de datos se indica en ms 24
 
-После коннекта к базе советник сам создает нужные таблицы под каждую пару
-
+Después de conectarse a la base de datos, el propio asesor crea las tablas necesarias para cada par.
 <p align="center">
   <img src="https://github.com/Lxbinary/MT5_ticks_to_MySQL/raw/master/image/bd1.png" width="600"/>
 </p>
@@ -31,5 +31,6 @@
   <img src="https://github.com/Lxbinary/MT5_ticks_to_MySQL/raw/master/image/bd2.png" width="600"/>
 </p>
 
-<b>ВНИМАНИЕ:</b>
-К сожалению либа работает только в синхронном режиме, чтоб все работало быстрее и не создавалось лага - рекомендую запускать несколько терминалов, в идеале, под каждую пару отдельный терминал.
+<b>ATENCIÓN:</b>
+Desafortunadamente, liba funciona solo en modo síncrono, por lo que todo funciona más rápido y no hay retrasos; recomiendo ejecutar varios terminales, idealmente, un terminal separado para cada par
+
